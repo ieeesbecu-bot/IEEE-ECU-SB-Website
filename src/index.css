@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Home {
+  background-image: url("./assets/Logo/Main.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right 50px; /* 👈 move it down */
+
+  @apply relative overflow-hidden h-screen text-white flex flex-col md:flex-row justify-start items-start px-10 md:px-20 pt-28 md:pt-44;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade {
+  animation: fadeIn 0.5s ease-in-out;
+}
